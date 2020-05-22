@@ -13,7 +13,32 @@
 		A523380224777C7600BF049E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A523380024777C7600BF049E /* Main.storyboard */; };
 		A523380424777C7800BF049E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A523380324777C7800BF049E /* Assets.xcassets */; };
 		A523380724777C7800BF049E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A523380524777C7800BF049E /* LaunchScreen.storyboard */; };
+		A523380F24777DDC00BF049E /* GitHubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523380E24777DDC00BF049E /* GitHubCell.swift */; };
+		A523381124777E3400BF049E /* GitHubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A523381024777E3400BF049E /* GitHubCell.xib */; };
+		A5233813247789D000BF049E /* GitHubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5233812247789D000BF049E /* GitHubData.swift */; };
+		A523381C24779A1000BF049E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A523381924779A1000BF049E /* Alamofire.framework */; };
+		A523381D24779A1000BF049E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A523381924779A1000BF049E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A523381E24779A1000BF049E /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A523381A24779A1000BF049E /* Kingfisher.framework */; };
+		A523381F24779A1000BF049E /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A523381A24779A1000BF049E /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A523382024779A1000BF049E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A523381B24779A1000BF049E /* SwiftyJSON.framework */; };
+		A523382124779A1000BF049E /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A523381B24779A1000BF049E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A523382224779A1000BF049E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A523381F24779A1000BF049E /* Kingfisher.framework in Embed Frameworks */,
+				A523381D24779A1000BF049E /* Alamofire.framework in Embed Frameworks */,
+				A523382124779A1000BF049E /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A52337F724777C7600BF049E /* HomeworkDay4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeworkDay4.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +49,12 @@
 		A523380324777C7800BF049E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A523380624777C7800BF049E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A523380824777C7800BF049E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A523380E24777DDC00BF049E /* GitHubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubCell.swift; sourceTree = "<group>"; };
+		A523381024777E3400BF049E /* GitHubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitHubCell.xib; sourceTree = "<group>"; };
+		A5233812247789D000BF049E /* GitHubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubData.swift; sourceTree = "<group>"; };
+		A523381924779A1000BF049E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = HomeworkDay4/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		A523381A24779A1000BF049E /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = HomeworkDay4/Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		A523381B24779A1000BF049E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = HomeworkDay4/Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A523381E24779A1000BF049E /* Kingfisher.framework in Frameworks */,
+				A523381C24779A1000BF049E /* Alamofire.framework in Frameworks */,
+				A523382024779A1000BF049E /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +76,7 @@
 			children = (
 				A52337F924777C7600BF049E /* HomeworkDay4 */,
 				A52337F824777C7600BF049E /* Products */,
+				A523381824779A0F00BF049E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +94,25 @@
 				A52337FA24777C7600BF049E /* AppDelegate.swift */,
 				A52337FC24777C7600BF049E /* SceneDelegate.swift */,
 				A52337FE24777C7600BF049E /* ViewController.swift */,
+				A5233812247789D000BF049E /* GitHubData.swift */,
 				A523380024777C7600BF049E /* Main.storyboard */,
+				A523380E24777DDC00BF049E /* GitHubCell.swift */,
+				A523381024777E3400BF049E /* GitHubCell.xib */,
 				A523380324777C7800BF049E /* Assets.xcassets */,
 				A523380524777C7800BF049E /* LaunchScreen.storyboard */,
 				A523380824777C7800BF049E /* Info.plist */,
 			);
 			path = HomeworkDay4;
+			sourceTree = "<group>";
+		};
+		A523381824779A0F00BF049E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A523381924779A1000BF049E /* Alamofire.framework */,
+				A523381A24779A1000BF049E /* Kingfisher.framework */,
+				A523381B24779A1000BF049E /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +125,7 @@
 				A52337F324777C7600BF049E /* Sources */,
 				A52337F424777C7600BF049E /* Frameworks */,
 				A52337F524777C7600BF049E /* Resources */,
+				A523382224779A1000BF049E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,6 +176,7 @@
 			files = (
 				A523380724777C7800BF049E /* LaunchScreen.storyboard in Resources */,
 				A523380424777C7800BF049E /* Assets.xcassets in Resources */,
+				A523381124777E3400BF049E /* GitHubCell.xib in Resources */,
 				A523380224777C7600BF049E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +190,9 @@
 			files = (
 				A52337FF24777C7600BF049E /* ViewController.swift in Sources */,
 				A52337FB24777C7600BF049E /* AppDelegate.swift in Sources */,
+				A523380F24777DDC00BF049E /* GitHubCell.swift in Sources */,
 				A52337FD24777C7600BF049E /* SceneDelegate.swift in Sources */,
+				A5233813247789D000BF049E /* GitHubData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +338,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QCVJB22ZX4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HomeworkDay4/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HomeworkDay4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -294,7 +350,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.nissan.mail.fumiaki-kobayashi.HomeworkDay4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,6 +360,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QCVJB22ZX4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HomeworkDay4/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HomeworkDay4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,7 +372,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.nissan.mail.fumiaki-kobayashi.HomeworkDay4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
