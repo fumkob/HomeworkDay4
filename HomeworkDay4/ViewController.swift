@@ -50,8 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.tableView.reloadData()
             }
         }
-        
-        
+
     }
 
     //テーブルセル数
