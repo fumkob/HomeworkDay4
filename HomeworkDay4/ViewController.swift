@@ -107,9 +107,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     gitHubData.createdDate = createdDate
                     gitHubData.updatedDate = updatedDate
                 
-                }
-
-                
+                }                
                 dataArray.append(gitHubData)
             }
 
