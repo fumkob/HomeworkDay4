@@ -36,7 +36,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //viewに追加
         self.view.addSubview(activityIndicator)
         
-        
         //テーブル設定
         tableView.delegate = self
         tableView.dataSource = self
@@ -47,6 +46,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.rowHeight = UITableView.automaticDimension
         
         //APIデータ取得
+        getData()
+        
+    }
+    
+    //テーブルセル数
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return gitHubDataArray.count
+    }
+    
+    //テーブル内データ->GitHubCellを適用
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! GitHubCell
+        
+        //表示内容を取得
+        cell.displaySetting(data: gitHubDataArray[indexPath.row])
+        
+        return cell
+    }
+  
+    //APIから取得する関数
+    func getData() {
         let url = URL(string: "https://api.github.com/search/repositories?q=language%3Aswift&sort=stars")!
         var urlRequest = URLRequest(url: url)
         //タイムアウト時間定義
@@ -71,8 +91,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let alert: UIAlertController = UIAlertController(title: "Error", message: "The internet connection appeared to be offline.", preferredStyle: UIAlertController.Style.alert)
                 
                 let retryAction: UIAlertAction = UIAlertAction(title: "Retry", style: UIAlertAction.Style.default, handler: {
-                    //通信リトライ・・・どう実現するか？
                     (action: UIAlertAction) -> Void in
+                    self.getData()
                 })
                 let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {
                     
@@ -95,36 +115,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.activityIndicator.stopAnimating()
             }
         }
-        
-    }
-    
-    //テーブルセル数
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gitHubDataArray.count
-    }
-    
-    //テーブル内データ->GitHubCellを適用
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! GitHubCell
-        cell.repositoryNameLabel.text = "\(gitHubDataArray[indexPath.row].repositoryName!)"
-        cell.userNameLabel.text = "\(gitHubDataArray[indexPath.row].userName!)"
-        cell.descriptionLabel.text = "\(gitHubDataArray[indexPath.row].description!)"
-        cell.starsLabel.text = "\(gitHubDataArray[indexPath.row].starCount!)"
-        cell.forksLabel.text = "\(gitHubDataArray[indexPath.row].forkCount!)"
-        cell.watchersLabel.text = "\(gitHubDataArray[indexPath.row].watcherCount!)"
-        cell.createdDateLabel.text = "\(gitHubDataArray[indexPath.row].createdDate!)"
-        cell.updatedDateLabel.text = "\(gitHubDataArray[indexPath.row].updatedDate!)"
-        
-        //DispatchQueueで画像を取得
-        let url = URL(string: gitHubDataArray[indexPath.row].userIconUrl!)
-        cell.iconImage.kf.indicatorType = .activity
-        
-        DispatchQueue.main.async {
-            cell.iconImage.kf.setImage(with: url)
-        }
-        
-        
-        return cell
     }
     
     //データを解析
