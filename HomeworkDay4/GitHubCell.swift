@@ -17,7 +17,9 @@ class GitHubCell: UITableViewCell {
     @IBOutlet weak var forksLabel: UILabel!
     @IBOutlet weak var watchersLabel: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
-
+    @IBOutlet weak var createdDateLabel: UILabel!
+    @IBOutlet weak var updatedDateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
