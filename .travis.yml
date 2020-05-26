@@ -3,4 +3,4 @@ os: osx
 osx_image: xcode11.4
 xcode_project: HomeworkDay4.xcodeproj # path to your xcodeproj folder
 xcode_scheme: HomeworkDay4Tests
-xcode_destination: platform=iOS Simulator,OS=13.4,name=iPhone 11
+xcode_destination: platform=iOS Simulator,OS=13.4.1,name=iPhone 11
