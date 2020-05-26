@@ -1,6 +1,6 @@
-language: objctive-c
+language: objective-c
 os: osx
-osx_image: xcode11.4
+osx_image: xcode11.5
 
 script:
-- xcodebuild test -project HomeworkDay4.xcodeproj -scheme HomeworkDay4 -destination 'platform=iOS Simulator,OS=13.4.1,name=iPhone 11'
+- xcodebuild test -project HomeworkDay4.xcodeproj -scheme HomeworkDay4 -destination 'platform=iOS Simulator,OS=13.5,name=iPhone 11'
