@@ -1,0 +1,5 @@
+language: objctive-c
+osx_image: xcode11.5
+xcode_project: HomeworkDay4.xcodeproj # path to your xcodeproj folder
+xcode_scheme: HomeworkDay4Tests
+xcode_destination: platform=iOS Simulator,OS=13.5,name=iPhone 11

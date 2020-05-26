@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51625F6247CFED10045A98B /* SampleFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDA982247CFAF40058DBCD /* SampleFile.swift */; };
 		A52337FB24777C7600BF049E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FA24777C7600BF049E /* AppDelegate.swift */; };
 		A52337FD24777C7600BF049E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FC24777C7600BF049E /* SceneDelegate.swift */; };
 		A52337FF24777C7600BF049E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FE24777C7600BF049E /* ViewController.swift */; };
@@ -22,7 +23,19 @@
 		A523381F24779A1000BF049E /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A523381A24779A1000BF049E /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A523382024779A1000BF049E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A523381B24779A1000BF049E /* SwiftyJSON.framework */; };
 		A523382124779A1000BF049E /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A523381B24779A1000BF049E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5F3F435247CBE1300D1B9AB /* HomeworkDay4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3F434247CBE1300D1B9AB /* HomeworkDay4Tests.swift */; };
+		A5FDA983247CFAF40058DBCD /* SampleFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDA982247CFAF40058DBCD /* SampleFile.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5F3F437247CBE1300D1B9AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A52337EF24777C7600BF049E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A52337F624777C7600BF049E;
+			remoteInfo = HomeworkDay4;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A523382224779A1000BF049E /* Embed Frameworks */ = {
@@ -55,6 +68,10 @@
 		A523381924779A1000BF049E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = HomeworkDay4/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		A523381A24779A1000BF049E /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = HomeworkDay4/Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		A523381B24779A1000BF049E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = HomeworkDay4/Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		A5F3F432247CBE1300D1B9AB /* HomeworkDay4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeworkDay4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5F3F434247CBE1300D1B9AB /* HomeworkDay4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkDay4Tests.swift; sourceTree = "<group>"; };
+		A5F3F436247CBE1300D1B9AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5FDA982247CFAF40058DBCD /* SampleFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +85,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5F3F42F247CBE1300D1B9AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -75,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				A52337F924777C7600BF049E /* HomeworkDay4 */,
+				A5F3F433247CBE1300D1B9AB /* HomeworkDay4Tests */,
 				A52337F824777C7600BF049E /* Products */,
 				A523381824779A0F00BF049E /* Frameworks */,
 			);
@@ -84,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				A52337F724777C7600BF049E /* HomeworkDay4.app */,
+				A5F3F432247CBE1300D1B9AB /* HomeworkDay4Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +125,7 @@
 				A523380E24777DDC00BF049E /* GitHubCell.swift */,
 				A523381024777E3400BF049E /* GitHubCell.xib */,
 				A523380324777C7800BF049E /* Assets.xcassets */,
+				A5FDA982247CFAF40058DBCD /* SampleFile.swift */,
 				A523380524777C7800BF049E /* LaunchScreen.storyboard */,
 				A523380824777C7800BF049E /* Info.plist */,
 			);
@@ -113,6 +140,15 @@
 				A523381B24779A1000BF049E /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5F3F433247CBE1300D1B9AB /* HomeworkDay4Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A5F3F434247CBE1300D1B9AB /* HomeworkDay4Tests.swift */,
+				A5F3F436247CBE1300D1B9AB /* Info.plist */,
+			);
+			path = HomeworkDay4Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,18 +172,40 @@
 			productReference = A52337F724777C7600BF049E /* HomeworkDay4.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A5F3F431247CBE1300D1B9AB /* HomeworkDay4Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5F3F43B247CBE1300D1B9AB /* Build configuration list for PBXNativeTarget "HomeworkDay4Tests" */;
+			buildPhases = (
+				A5F3F42E247CBE1300D1B9AB /* Sources */,
+				A5F3F42F247CBE1300D1B9AB /* Frameworks */,
+				A5F3F430247CBE1300D1B9AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5F3F438247CBE1300D1B9AB /* PBXTargetDependency */,
+			);
+			name = HomeworkDay4Tests;
+			productName = HomeworkDay4Tests;
+			productReference = A5F3F432247CBE1300D1B9AB /* HomeworkDay4Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		A52337EF24777C7600BF049E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Fumiaki Kobayashi";
 				TargetAttributes = {
 					A52337F624777C7600BF049E = {
 						CreatedOnToolsVersion = 11.4.1;
+					};
+					A5F3F431247CBE1300D1B9AB = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = A52337F624777C7600BF049E;
 					};
 				};
 			};
@@ -165,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				A52337F624777C7600BF049E /* HomeworkDay4 */,
+				A5F3F431247CBE1300D1B9AB /* HomeworkDay4Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -181,6 +240,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5F3F430247CBE1300D1B9AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -189,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A52337FF24777C7600BF049E /* ViewController.swift in Sources */,
+				A5FDA983247CFAF40058DBCD /* SampleFile.swift in Sources */,
 				A52337FB24777C7600BF049E /* AppDelegate.swift in Sources */,
 				A523380F24777DDC00BF049E /* GitHubCell.swift in Sources */,
 				A52337FD24777C7600BF049E /* SceneDelegate.swift in Sources */,
@@ -196,7 +263,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5F3F42E247CBE1300D1B9AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5F3F435247CBE1300D1B9AB /* HomeworkDay4Tests.swift in Sources */,
+				A51625F6247CFED10045A98B /* SampleFile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5F3F438247CBE1300D1B9AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A52337F624777C7600BF049E /* HomeworkDay4 */;
+			targetProxy = A5F3F437247CBE1300D1B9AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A523380024777C7600BF049E /* Main.storyboard */ = {
@@ -252,6 +336,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -312,6 +397,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -376,6 +462,56 @@
 			};
 			name = Release;
 		};
+		A5F3F439247CBE1300D1B9AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QCVJB22ZX4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HomeworkDay4/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = HomeworkDay4Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.nissan.mail.fumiaki-kobayashi.HomeworkDay4Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HomeworkDay4.app/HomeworkDay4";
+			};
+			name = Debug;
+		};
+		A5F3F43A247CBE1300D1B9AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QCVJB22ZX4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HomeworkDay4/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = HomeworkDay4Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.nissan.mail.fumiaki-kobayashi.HomeworkDay4Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HomeworkDay4.app/HomeworkDay4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -393,6 +529,15 @@
 			buildConfigurations = (
 				A523380C24777C7800BF049E /* Debug */,
 				A523380D24777C7800BF049E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5F3F43B247CBE1300D1B9AB /* Build configuration list for PBXNativeTarget "HomeworkDay4Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5F3F439247CBE1300D1B9AB /* Debug */,
+				A5F3F43A247CBE1300D1B9AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
