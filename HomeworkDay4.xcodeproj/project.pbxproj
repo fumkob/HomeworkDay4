@@ -8,23 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		A51625F6247CFED10045A98B /* SampleFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDA982247CFAF40058DBCD /* SampleFile.swift */; };
-		A52337FB24777C7600BF049E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FA24777C7600BF049E /* AppDelegate.swift */; };
-		A52337FD24777C7600BF049E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FC24777C7600BF049E /* SceneDelegate.swift */; };
-		A52337FF24777C7600BF049E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FE24777C7600BF049E /* ViewController.swift */; };
 		A523380224777C7600BF049E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A523380024777C7600BF049E /* Main.storyboard */; };
 		A523380424777C7800BF049E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A523380324777C7800BF049E /* Assets.xcassets */; };
 		A523380724777C7800BF049E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A523380524777C7800BF049E /* LaunchScreen.storyboard */; };
-		A523380F24777DDC00BF049E /* GitHubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523380E24777DDC00BF049E /* GitHubCell.swift */; };
 		A523381124777E3400BF049E /* GitHubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A523381024777E3400BF049E /* GitHubCell.xib */; };
-		A5233813247789D000BF049E /* GitHubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5233812247789D000BF049E /* GitHubData.swift */; };
 		A537025F247E00D10082F040 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A537025C247E00D00082F040 /* Kingfisher.framework */; };
 		A5370260247E00D10082F040 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A537025C247E00D00082F040 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5370261247E00D10082F040 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A537025D247E00D10082F040 /* SwiftyJSON.framework */; };
 		A5370262247E00D10082F040 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A537025D247E00D10082F040 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5370263247E00D10082F040 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A537025E247E00D10082F040 /* Alamofire.framework */; };
 		A5370264247E00D10082F040 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A537025E247E00D10082F040 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5370266247E523B0082F040 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FA24777C7600BF049E /* AppDelegate.swift */; };
+		A5370267247E523B0082F040 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FC24777C7600BF049E /* SceneDelegate.swift */; };
+		A5370268247E523B0082F040 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FE24777C7600BF049E /* ViewController.swift */; };
+		A5370269247E523B0082F040 /* GitHubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5233812247789D000BF049E /* GitHubData.swift */; };
+		A537026A247E523B0082F040 /* GitHubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523380E24777DDC00BF049E /* GitHubCell.swift */; };
+		A537026B247E523B0082F040 /* SampleFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDA982247CFAF40058DBCD /* SampleFile.swift */; };
 		A5F3F435247CBE1300D1B9AB /* HomeworkDay4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3F434247CBE1300D1B9AB /* HomeworkDay4Tests.swift */; };
-		A5FDA983247CFAF40058DBCD /* SampleFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDA982247CFAF40058DBCD /* SampleFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,12 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A52337FF24777C7600BF049E /* ViewController.swift in Sources */,
-				A5FDA983247CFAF40058DBCD /* SampleFile.swift in Sources */,
-				A52337FB24777C7600BF049E /* AppDelegate.swift in Sources */,
-				A523380F24777DDC00BF049E /* GitHubCell.swift in Sources */,
-				A52337FD24777C7600BF049E /* SceneDelegate.swift in Sources */,
-				A5233813247789D000BF049E /* GitHubData.swift in Sources */,
+				A5370266247E523B0082F040 /* AppDelegate.swift in Sources */,
+				A5370267247E523B0082F040 /* SceneDelegate.swift in Sources */,
+				A5370268247E523B0082F040 /* ViewController.swift in Sources */,
+				A5370269247E523B0082F040 /* GitHubData.swift in Sources */,
+				A537026A247E523B0082F040 /* GitHubCell.swift in Sources */,
+				A537026B247E523B0082F040 /* SampleFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +459,7 @@
 		A5F3F439247CBE1300D1B9AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QCVJB22ZX4;
@@ -481,6 +482,7 @@
 		A5F3F43A247CBE1300D1B9AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QCVJB22ZX4;
