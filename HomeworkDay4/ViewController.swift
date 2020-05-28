@@ -13,7 +13,6 @@ import SwiftyJSON
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var gitHubDataArray = [GitHubData]()
-    //    var gitHubDataManager = GitHubDataManager()
     @IBOutlet weak var tableView: UITableView!
     
     var activityIndicator: UIActivityIndicatorView!
@@ -29,9 +28,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //非表示設定
         activityIndicator.hidesWhenStopped = true
         
-        //アニメーション開始
-        activityIndicator.startAnimating()
-        
         //viewに追加
         self.view.addSubview(activityIndicator)
         
@@ -46,7 +42,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //APIデータ取得
         getData()
-        
     }
     
     //テーブルセル数
@@ -59,14 +54,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! GitHubCell
         
         //表示内容を取得
-        cell.displaySetting(data: gitHubDataArray[indexPath.row])
+        DispatchQueue.main.async {
+            cell.displaySetting(data: self.gitHubDataArray[indexPath.row])
+        }
         
         return cell
     }
   
     //APIから取得する関数
     func getData() {
-        let url = URL(string: "https://api.github.com/search/repositories?q=language%3Aswift&sort=stars")!
+        //アニメーション開始
+        activityIndicator.startAnimating()
+        
+        //URL定義
+        guard let url = URL(string: "https://api.github.com/search/repositories?q=language%3Aswift&sort=stars")
+            else {
+            fatalError("url is nil")
+        }
         var urlRequest = URLRequest(url: url)
         //タイムアウト時間定義
         urlRequest.timeoutInterval = 5
@@ -76,80 +80,46 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             switch response.result {
             //成功
             case .success(let value) :
-                let jsonData = JSON(value)
-                let items = jsonData["items"]
-                
-                //データを解析し、配列に格納する
-                self.gitHubDataArray = self.parseData(items: items)
+                self.onSuccess(value: value)
             //失敗
-            case .failure :
-                print("Read Error")
-                //インジケーター停止
-                self.activityIndicator.stopAnimating()
-                //Alert表示
-                let alert: UIAlertController = UIAlertController(title: "Error", message: "The internet connection appeared to be offline.", preferredStyle: UIAlertController.Style.alert)
-                
-                let retryAction: UIAlertAction = UIAlertAction(title: "Retry", style: UIAlertAction.Style.default, handler: {
-                    (action: UIAlertAction) -> Void in
-                    self.getData()
-                })
-                let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {
-                    
-                    (action: UIAlertAction) -> Void in
-                })
-                
-                alert.addAction(retryAction)
-                alert.addAction(cancelAction)
-                
-                self.present(alert, animated: true, completion: nil)
-                
-                return
+            case .failure(let error) :
+                self.onError(error: error)
             }
-            
-            //テーブルデータ更新
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                print("Table Reloaded")
-                //インジケーター停止
-                self.activityIndicator.stopAnimating()
-            }
+            //終了
+            self.onComplete()
         }
     }
     
-    //データを解析
-    func parseData(items: JSON) -> [GitHubData] {
-        var dataArray = [GitHubData]()
-        //各値を格納する
-        for (number,_) in items.enumerated() {
-            let gitHubData = GitHubData()
-            
-            if
-                let repositoryName = items[number]["name"].string,
-                let userIconUrl = items[number]["owner"]["avatar_url"].string,
-                let userName = items[number]["owner"]["login"].string,
-                let description = items[number]["description"].string,
-                let starCount = items[number]["stargazers_count"].int,
-                let forkCount = items[number]["forks_count"].int,
-                let watcherCount = items[number]["watchers_count"].int,
-                let createdDate = items[number]["created_at"].string,
-                let updatedDate = items[number]["updated_at"].string {
-                
-                gitHubData.repositoryName = repositoryName
-                gitHubData.userIconUrl = userIconUrl
-                gitHubData.userName = userName
-                gitHubData.description = description
-                gitHubData.starCount = starCount
-                gitHubData.forkCount = forkCount
-                gitHubData.watcherCount = watcherCount
-                gitHubData.createdDate = createdDate
-                gitHubData.updatedDate = updatedDate
-                
-            }
-            dataArray.append(gitHubData)
-        }
+    //取得成功時
+    func onSuccess(value: Any) -> Void {
+        let jsonData = JSON(value)
+        let items = jsonData["items"]
         
-        return dataArray
+        //データを解析し、配列に格納する
+        self.gitHubDataArray = items.map { GitHubData(item: $0.1) }
+        
+        //テーブルデータ更新
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
+    //取得失敗時
+    func onError(error: Error) -> Void {
+        print(error)
+        //インジケーター停止
+        self.activityIndicator.stopAnimating()
+        //Alert表示
+        let alert = UIAlertController.apiAlert(title: "Error", message: "The internet connection appeared to be offline.", preferredStyle: .alert, retryHandler: {
+            (action: UIAlertAction) -> Void in
+            self.getData()
+        })
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    //終了時
+    func onComplete() {
+        self.activityIndicator.stopAnimating()
+    }
 }
-

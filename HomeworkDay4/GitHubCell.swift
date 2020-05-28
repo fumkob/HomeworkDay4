@@ -34,21 +34,19 @@ class GitHubCell: UITableViewCell {
     
     //表示内容を格納する
     func displaySetting(data: GitHubData) {
-        repositoryNameLabel.text = "\(data.repositoryName!)"
-        userNameLabel.text = "\(data.userName!)"
-        descriptionLabel.text = "\(data.description!)"
-        starsLabel.text = "\(data.starCount!)"
-        forksLabel.text = "\(data.forkCount!)"
-        watchersLabel.text = "\(data.watcherCount!)"
-        createdDateLabel.text = "\(data.createdDate!)"
-        updatedDateLabel.text = "\(data.updatedDate!)"
+        repositoryNameLabel.text = "\(data.repositoryName)"
+        userNameLabel.text = "\(data.userName)"
+        descriptionLabel.text = "\(data.description)"
+        starsLabel.text = "\(data.starCount)"
+        forksLabel.text = "\(data.forkCount)"
+        watchersLabel.text = "\(data.watcherCount)"
+        createdDateLabel.text = "\(data.createdDate)"
+        updatedDateLabel.text = "\(data.updatedDate)"
         
-        //DispatchQueueで画像を取得
-        let url = URL(string: data.userIconUrl!)
+        //画像を取得
+        let url = URL(string: data.userIconUrl)
         iconImage.kf.indicatorType = .activity
-        DispatchQueue.main.async {
-            self.iconImage.kf.setImage(with: url)
-        }
+        self.iconImage.kf.setImage(with: url)
     }
 
 }

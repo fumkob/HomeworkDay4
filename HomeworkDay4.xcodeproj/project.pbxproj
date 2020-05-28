@@ -19,6 +19,11 @@
 		A52337FB24777C7600BF049E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FA24777C7600BF049E /* AppDelegate.swift */; };
 		A52337FD24777C7600BF049E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FC24777C7600BF049E /* SceneDelegate.swift */; };
 		A523380424777C7800BF049E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A523380324777C7800BF049E /* Assets.xcassets */; };
+		A56A4986249275160029EFDE /* AlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A4981249275160029EFDE /* AlertControllerExtension.swift */; };
+		A56A4987249275160029EFDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A4982249275160029EFDE /* ViewController.swift */; };
+		A56A4988249275160029EFDE /* GitHubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56A4983249275160029EFDE /* GitHubCell.xib */; };
+		A56A4989249275160029EFDE /* GitHubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A4984249275160029EFDE /* GitHubCell.swift */; };
+		A56A498A249275160029EFDE /* GitHubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A4985249275160029EFDE /* GitHubData.swift */; };
 		A5C5E8DA248397C6008259A0 /* HomeworkDay4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5E8D9248397C6008259A0 /* HomeworkDay4UITests.swift */; };
 		A5C5E8E22483A0A1008259A0 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5E8E12483A0A0008259A0 /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +75,11 @@
 		A523380324777C7800BF049E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A523380624777C7800BF049E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A523380824777C7800BF049E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A56A4981249275160029EFDE /* AlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertControllerExtension.swift; sourceTree = "<group>"; };
+		A56A4982249275160029EFDE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A56A4983249275160029EFDE /* GitHubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GitHubCell.xib; sourceTree = "<group>"; };
+		A56A4984249275160029EFDE /* GitHubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubCell.swift; sourceTree = "<group>"; };
+		A56A4985249275160029EFDE /* GitHubData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubData.swift; sourceTree = "<group>"; };
 		A5C5E8D7248397C6008259A0 /* HomeworkDay4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeworkDay4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C5E8D9248397C6008259A0 /* HomeworkDay4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkDay4UITests.swift; sourceTree = "<group>"; };
 		A5C5E8DB248397C6008259A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +150,11 @@
 				A52337FA24777C7600BF049E /* AppDelegate.swift */,
 				A52337FC24777C7600BF049E /* SceneDelegate.swift */,
 				A523380024777C7600BF049E /* Main.storyboard */,
+				A56A4981249275160029EFDE /* AlertControllerExtension.swift */,
+				A56A4984249275160029EFDE /* GitHubCell.swift */,
+				A56A4983249275160029EFDE /* GitHubCell.xib */,
+				A56A4985249275160029EFDE /* GitHubData.swift */,
+				A56A4982249275160029EFDE /* ViewController.swift */,
 				A523380324777C7800BF049E /* Assets.xcassets */,
 				A523380524777C7800BF049E /* LaunchScreen.storyboard */,
 				A523380824777C7800BF049E /* Info.plist */,
@@ -282,6 +297,7 @@
 			files = (
 				A519A393247FF93C00125C63 /* Main.storyboard in Resources */,
 				A519A394247FF93C00125C63 /* LaunchScreen.storyboard in Resources */,
+				A56A4988249275160029EFDE /* GitHubCell.xib in Resources */,
 				A523380424777C7800BF049E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,7 +344,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56A4986249275160029EFDE /* AlertControllerExtension.swift in Sources */,
 				A52337FB24777C7600BF049E /* AppDelegate.swift in Sources */,
+				A56A4989249275160029EFDE /* GitHubCell.swift in Sources */,
+				A56A4987249275160029EFDE /* ViewController.swift in Sources */,
+				A56A498A249275160029EFDE /* GitHubData.swift in Sources */,
 				A52337FD24777C7600BF049E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
