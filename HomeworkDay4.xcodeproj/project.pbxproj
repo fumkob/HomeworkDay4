@@ -7,33 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A519A393247FF93C00125C63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A523380024777C7600BF049E /* Main.storyboard */; };
+		A519A394247FF93C00125C63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A523380524777C7800BF049E /* LaunchScreen.storyboard */; };
+		A519A398247FF96B00125C63 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A519A395247FF96B00125C63 /* SwiftyJSON.framework */; };
+		A519A399247FF96B00125C63 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A519A395247FF96B00125C63 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A519A39A247FF96B00125C63 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A519A396247FF96B00125C63 /* Alamofire.framework */; };
+		A519A39B247FF96B00125C63 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A519A396247FF96B00125C63 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A519A39C247FF96B00125C63 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A519A397247FF96B00125C63 /* Kingfisher.framework */; };
+		A519A39D247FF96B00125C63 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A519A397247FF96B00125C63 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A519A3A6247FF9B200125C63 /* HomeworkDay4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A519A3A5247FF9B200125C63 /* HomeworkDay4Tests.swift */; };
 		A52337FB24777C7600BF049E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FA24777C7600BF049E /* AppDelegate.swift */; };
 		A52337FD24777C7600BF049E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FC24777C7600BF049E /* SceneDelegate.swift */; };
-		A52337FF24777C7600BF049E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52337FE24777C7600BF049E /* ViewController.swift */; };
-		A523380224777C7600BF049E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A523380024777C7600BF049E /* Main.storyboard */; };
 		A523380424777C7800BF049E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A523380324777C7800BF049E /* Assets.xcassets */; };
-		A523380724777C7800BF049E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A523380524777C7800BF049E /* LaunchScreen.storyboard */; };
-		A523380F24777DDC00BF049E /* GitHubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523380E24777DDC00BF049E /* GitHubCell.swift */; };
-		A523381124777E3400BF049E /* GitHubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A523381024777E3400BF049E /* GitHubCell.xib */; };
-		A5233813247789D000BF049E /* GitHubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5233812247789D000BF049E /* GitHubData.swift */; };
-		A523381C24779A1000BF049E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A523381924779A1000BF049E /* Alamofire.framework */; };
-		A523381D24779A1000BF049E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A523381924779A1000BF049E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A523381E24779A1000BF049E /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A523381A24779A1000BF049E /* Kingfisher.framework */; };
-		A523381F24779A1000BF049E /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A523381A24779A1000BF049E /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A523382024779A1000BF049E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A523381B24779A1000BF049E /* SwiftyJSON.framework */; };
-		A523382124779A1000BF049E /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A523381B24779A1000BF049E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A519A3A8247FF9B200125C63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A52337EF24777C7600BF049E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A52337F624777C7600BF049E;
+			remoteInfo = HomeworkDay4;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		A523382224779A1000BF049E /* Embed Frameworks */ = {
+		A519A39E247FF96B00125C63 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A523381F24779A1000BF049E /* Kingfisher.framework in Embed Frameworks */,
-				A523381D24779A1000BF049E /* Alamofire.framework in Embed Frameworks */,
-				A523382124779A1000BF049E /* SwiftyJSON.framework in Embed Frameworks */,
+				A519A399247FF96B00125C63 /* SwiftyJSON.framework in Embed Frameworks */,
+				A519A39D247FF96B00125C63 /* Kingfisher.framework in Embed Frameworks */,
+				A519A39B247FF96B00125C63 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,40 +48,56 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A519A395247FF96B00125C63 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		A519A396247FF96B00125C63 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		A519A397247FF96B00125C63 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		A519A3A3247FF9B100125C63 /* HomeworkDay4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeworkDay4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A519A3A5247FF9B200125C63 /* HomeworkDay4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkDay4Tests.swift; sourceTree = "<group>"; };
+		A519A3A7247FF9B200125C63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A52337F724777C7600BF049E /* HomeworkDay4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeworkDay4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52337FA24777C7600BF049E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A52337FC24777C7600BF049E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A52337FE24777C7600BF049E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A523380124777C7600BF049E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A523380324777C7800BF049E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A523380624777C7800BF049E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A523380824777C7800BF049E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A523380E24777DDC00BF049E /* GitHubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubCell.swift; sourceTree = "<group>"; };
-		A523381024777E3400BF049E /* GitHubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitHubCell.xib; sourceTree = "<group>"; };
-		A5233812247789D000BF049E /* GitHubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubData.swift; sourceTree = "<group>"; };
-		A523381924779A1000BF049E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = HomeworkDay4/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		A523381A24779A1000BF049E /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = HomeworkDay4/Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		A523381B24779A1000BF049E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = HomeworkDay4/Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A519A3A0247FF9B100125C63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A52337F424777C7600BF049E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A523381E24779A1000BF049E /* Kingfisher.framework in Frameworks */,
-				A523381C24779A1000BF049E /* Alamofire.framework in Frameworks */,
-				A523382024779A1000BF049E /* SwiftyJSON.framework in Frameworks */,
+				A519A398247FF96B00125C63 /* SwiftyJSON.framework in Frameworks */,
+				A519A39C247FF96B00125C63 /* Kingfisher.framework in Frameworks */,
+				A519A39A247FF96B00125C63 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A519A3A4247FF9B100125C63 /* HomeworkDay4Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A519A3A5247FF9B200125C63 /* HomeworkDay4Tests.swift */,
+				A519A3A7247FF9B200125C63 /* Info.plist */,
+			);
+			path = HomeworkDay4Tests;
+			sourceTree = "<group>";
+		};
 		A52337EE24777C7600BF049E = {
 			isa = PBXGroup;
 			children = (
 				A52337F924777C7600BF049E /* HomeworkDay4 */,
+				A519A3A4247FF9B100125C63 /* HomeworkDay4Tests */,
 				A52337F824777C7600BF049E /* Products */,
 				A523381824779A0F00BF049E /* Frameworks */,
 			);
@@ -84,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				A52337F724777C7600BF049E /* HomeworkDay4.app */,
+				A519A3A3247FF9B100125C63 /* HomeworkDay4Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,11 +117,7 @@
 			children = (
 				A52337FA24777C7600BF049E /* AppDelegate.swift */,
 				A52337FC24777C7600BF049E /* SceneDelegate.swift */,
-				A52337FE24777C7600BF049E /* ViewController.swift */,
-				A5233812247789D000BF049E /* GitHubData.swift */,
 				A523380024777C7600BF049E /* Main.storyboard */,
-				A523380E24777DDC00BF049E /* GitHubCell.swift */,
-				A523381024777E3400BF049E /* GitHubCell.xib */,
 				A523380324777C7800BF049E /* Assets.xcassets */,
 				A523380524777C7800BF049E /* LaunchScreen.storyboard */,
 				A523380824777C7800BF049E /* Info.plist */,
@@ -108,9 +128,9 @@
 		A523381824779A0F00BF049E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A523381924779A1000BF049E /* Alamofire.framework */,
-				A523381A24779A1000BF049E /* Kingfisher.framework */,
-				A523381B24779A1000BF049E /* SwiftyJSON.framework */,
+				A519A396247FF96B00125C63 /* Alamofire.framework */,
+				A519A397247FF96B00125C63 /* Kingfisher.framework */,
+				A519A395247FF96B00125C63 /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,6 +138,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A519A3A2247FF9B100125C63 /* HomeworkDay4Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A519A3AA247FF9B200125C63 /* Build configuration list for PBXNativeTarget "HomeworkDay4Tests" */;
+			buildPhases = (
+				A519A39F247FF9B100125C63 /* Sources */,
+				A519A3A0247FF9B100125C63 /* Frameworks */,
+				A519A3A1247FF9B100125C63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A519A3A9247FF9B200125C63 /* PBXTargetDependency */,
+			);
+			name = HomeworkDay4Tests;
+			productName = HomeworkDay4Tests;
+			productReference = A519A3A3247FF9B100125C63 /* HomeworkDay4Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A52337F624777C7600BF049E /* HomeworkDay4 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A523380B24777C7800BF049E /* Build configuration list for PBXNativeTarget "HomeworkDay4" */;
@@ -125,7 +163,7 @@
 				A52337F324777C7600BF049E /* Sources */,
 				A52337F424777C7600BF049E /* Frameworks */,
 				A52337F524777C7600BF049E /* Resources */,
-				A523382224779A1000BF049E /* Embed Frameworks */,
+				A519A39E247FF96B00125C63 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,10 +180,14 @@
 		A52337EF24777C7600BF049E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Fumiaki Kobayashi";
 				TargetAttributes = {
+					A519A3A2247FF9B100125C63 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = A52337F624777C7600BF049E;
+					};
 					A52337F624777C7600BF049E = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -165,38 +207,58 @@
 			projectRoot = "";
 			targets = (
 				A52337F624777C7600BF049E /* HomeworkDay4 */,
+				A519A3A2247FF9B100125C63 /* HomeworkDay4Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A519A3A1247FF9B100125C63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A52337F524777C7600BF049E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A523380724777C7800BF049E /* LaunchScreen.storyboard in Resources */,
+				A519A393247FF93C00125C63 /* Main.storyboard in Resources */,
+				A519A394247FF93C00125C63 /* LaunchScreen.storyboard in Resources */,
 				A523380424777C7800BF049E /* Assets.xcassets in Resources */,
-				A523381124777E3400BF049E /* GitHubCell.xib in Resources */,
-				A523380224777C7600BF049E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A519A39F247FF9B100125C63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A519A3A6247FF9B200125C63 /* HomeworkDay4Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A52337F324777C7600BF049E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A52337FF24777C7600BF049E /* ViewController.swift in Sources */,
 				A52337FB24777C7600BF049E /* AppDelegate.swift in Sources */,
-				A523380F24777DDC00BF049E /* GitHubCell.swift in Sources */,
 				A52337FD24777C7600BF049E /* SceneDelegate.swift in Sources */,
-				A5233813247789D000BF049E /* GitHubData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A519A3A9247FF9B200125C63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A52337F624777C7600BF049E /* HomeworkDay4 */;
+			targetProxy = A519A3A8247FF9B200125C63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A523380024777C7600BF049E /* Main.storyboard */ = {
@@ -218,6 +280,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A519A3AB247FF9B200125C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QCVJB22ZX4;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				INFOPLIST_FILE = HomeworkDay4Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.nissan.mail.fumiaki-kobayashi.HomeworkDay4Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HomeworkDay4.app/HomeworkDay4";
+			};
+			name = Debug;
+		};
+		A519A3AC247FF9B200125C63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QCVJB22ZX4;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				INFOPLIST_FILE = HomeworkDay4Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.nissan.mail.fumiaki-kobayashi.HomeworkDay4Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HomeworkDay4.app/HomeworkDay4";
+			};
+			name = Release;
+		};
 		A523380924777C7800BF049E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -338,10 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QCVJB22ZX4;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/HomeworkDay4/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = HomeworkDay4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -360,10 +463,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QCVJB22ZX4;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/HomeworkDay4/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = HomeworkDay4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,6 +479,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A519A3AA247FF9B200125C63 /* Build configuration list for PBXNativeTarget "HomeworkDay4Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A519A3AB247FF9B200125C63 /* Debug */,
+				A519A3AC247FF9B200125C63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A52337F224777C7600BF049E /* Build configuration list for PBXProject "HomeworkDay4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
