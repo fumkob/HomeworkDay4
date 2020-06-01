@@ -25,5 +25,6 @@
 
 #For Unit Test
 lane :tests do
-	run_tests(devices: "iPhone 11", scheme: "HomeworkDay4 for Unit Tests")
+# 	run_tests(devices: "iPhone 11", scheme: "HomeworkDay4 for Unit Tests")
+	scan(devices: "iPhone 11", scheme: "HomeworkDay4 for Unit Tests")
 	end
