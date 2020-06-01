@@ -5,7 +5,7 @@ before_install:
 - carthage update --platform iOS
 - bundle install
 script:
-- fastlane beta
+- fastlane tests
 # - xcodebuild test -project HomeworkDay4.xcodeproj -scheme HomeworkDay4 -destination
 #  'platform=iOS Simulator,OS=13.5,name=iPhone 11'
 env:
