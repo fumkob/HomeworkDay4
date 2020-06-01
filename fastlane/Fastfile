@@ -24,7 +24,6 @@
 # end
 
 #For Unit Test
-setup_travis
 lane :tests do
 	run_tests(devices: "iPhone 11", scheme: "HomeworkDay4 for Unit Tests")
 	end
