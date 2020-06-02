@@ -13,10 +13,8 @@ extension UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
         let retryAction = UIAlertAction(title: "Retry", style: UIAlertAction.Style.default, handler: retryHandler)
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
-        
         alert.addAction(retryAction)
         alert.addAction(cancelAction)
-        
         return alert
     }
 }

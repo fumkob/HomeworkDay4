@@ -20,7 +20,6 @@ class GitHubCell: UITableViewCell {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var createdDateLabel: UILabel!
     @IBOutlet weak var updatedDateLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,7 +30,6 @@ class GitHubCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
     //表示内容を格納する
     func displaySetting(data: GitHubData) {
         repositoryNameLabel.text = "\(data.repositoryName)"
@@ -42,7 +40,6 @@ class GitHubCell: UITableViewCell {
         watchersLabel.text = "\(data.watcherCount)"
         createdDateLabel.text = "\(data.createdDate)"
         updatedDateLabel.text = "\(data.updatedDate)"
-        
         //画像を取得
         let url = URL(string: data.userIconUrl)
         iconImage.kf.indicatorType = .activity

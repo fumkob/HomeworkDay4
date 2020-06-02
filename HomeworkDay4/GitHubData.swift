@@ -28,7 +28,7 @@ struct GitHubData {
     let createdDate: String
     //更新日
     let updatedDate: String
-    
+    //初期化
     init(item: JSON) {
         guard let repositoryName = item["name"].string else {
             fatalError("Required parameter \"name\" is missing")
@@ -57,7 +57,6 @@ struct GitHubData {
         guard let updatedDate = item["updated_at"].string else {
             fatalError("Required parameter \"updated_at\" is missing")
         }
-        
         self.repositoryName = repositoryName
         self.userIconUrl = userIconUrl
         self.userName = userName

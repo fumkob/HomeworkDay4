@@ -2,5 +2,7 @@ excluded:
  - Pods
  - Carthage
  - vendor/bundle
+ - fastlane
+ - HomeworkDay4/SceneDelegate.swift
+ - HomeworkDay4/AppDelegate.swift
 line_length: 300
- 
