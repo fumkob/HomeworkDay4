@@ -1,5 +1,6 @@
 excluded:
  - Pods
  - Carthage
+ - vendor/bundle
 line_length: 300
  
