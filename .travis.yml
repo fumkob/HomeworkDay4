@@ -3,8 +3,8 @@ os: osx
 osx_image: xcode11.5
 
 cache:
-	directories:
-	- Carthage
+  directories:
+  - Carthage
 
 before_install:
 - carthage update --platform iOS
