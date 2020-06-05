@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-struct GitHubData {
+public struct GitHubData {
     //リポジトリ名
     let repositoryName: String
     //ユーザーアイコン

@@ -31,7 +31,7 @@ class GitHubCell: UITableViewCell {
         // Configure the view for the selected state
     }
     //表示内容を格納する
-    func displaySetting(data: GitHubData) {
+    public func displaySetting(data: GitHubData) {
         repositoryNameLabel.text = "\(data.repositoryName)"
         userNameLabel.text = "\(data.userName)"
         descriptionLabel.text = "\(data.description)"
@@ -45,5 +45,4 @@ class GitHubCell: UITableViewCell {
         iconImage.kf.indicatorType = .activity
         self.iconImage.kf.setImage(with: url)
     }
-
 }

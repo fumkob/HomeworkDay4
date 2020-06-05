@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ViewInterface: class {
+public protocol ViewInterface: class {
     func reload()
     func startIndicator()
     func stopIndicator()
@@ -16,8 +16,8 @@ protocol ViewInterface: class {
 }
 
 class ViewController: UIViewController {
-    var presenter: Presenter!
-    var activityIndicator: UIActivityIndicatorView!
+    private var presenter: Presenter!
+    private var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         presenter.requestData()
     }
     //インジゲータ設定
-    func indicatorSetting() {
+    private func indicatorSetting() {
         //読み込み用インジケーター表示
         activityIndicator = UIActivityIndicatorView()
         activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         self.view.addSubview(activityIndicator)
     }
     //テーブル設定
-    func tableSetting() {
+    private func tableSetting() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "GitHubCell", bundle: nil), forCellReuseIdentifier: "cell")
@@ -62,26 +62,24 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? GitHubCell else { abort() }
         //表示内容を取得
-        DispatchQueue.main.async {
-            cell.displaySetting(data: self.presenter.gitHubDataArray[indexPath.row])
-        }
+        cell.displaySetting(data: presenter.gitHubDataArray[indexPath.row])
         return cell
     }
 }
 
 extension ViewController: ViewInterface {
-    func reload() {
+    public func reload() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
-    func startIndicator() {
+    public func startIndicator() {
         activityIndicator.startAnimating()
     }
-    func stopIndicator() {
+    public func stopIndicator() {
         activityIndicator.stopAnimating()
     }
-    func presentAlert() {
+    public func presentAlert() {
         let alert = UIAlertController.apiAlert(title: "Error", message: "The internet connection appeared to be offline.", preferredStyle: .alert, retryHandler: { (_ : UIAlertAction) -> Void in
             self.presenter.requestData()
         })

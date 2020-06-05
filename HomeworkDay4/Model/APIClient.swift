@@ -8,31 +8,30 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
-protocol APIClientDelegate: class {
-    func didSuccess(value: Any)
-    func didError(error: Error)
-    func didComplete()
-}
-
-class APIClient {
-    weak var delegate: APIClientDelegate?
-    func getData(url: URL) {
+public class APIClient {
+    private let afRequest = AF
+    public func getData(url: URL, callBack: @escaping (Result<[GitHubData], Error>) -> Void) {
         var urlRequest = URLRequest(url: url)
         //タイムアウト時間定義
         urlRequest.timeoutInterval = 5
         //データ取得
-        AF.request(urlRequest).validate().responseJSON {[weak self] response in
+        afRequest.request(urlRequest).validate().responseJSON {response in
             switch response.result {
             //成功
             case .success(let value) :
-                self?.delegate?.didSuccess(value: value)
-            //失敗
+                callBack(.success(self.parseData(value: value)))
             case .failure(let error) :
-                self?.delegate?.didError(error: error)
+                print(error)
+                callBack(.failure(error))
             }
-            //終了
-            self?.delegate?.didComplete()
         }
+    }
+    private func parseData(value: Any) -> [GitHubData] {
+        let jsonData = JSON(value)
+        let items = jsonData["items"]
+        //データを解析し、配列に格納する
+        return items.map { GitHubData(item: $0.1) }
     }
 }
