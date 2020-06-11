@@ -8,12 +8,12 @@
 
 import Foundation
 
-public class Presenter {
-    public var gitHubDataArray = [GitHubData]()
+private class Presenter {
+    private var gitHubDataArray = [GitHubData]()
     private weak var view: ViewInterface?
-    public let apiClient: APIClient
+    private let apiClient: APIClient
     //データをAPIからリクエスト
-    public func requestData() {
+    private func requestData() {
         view?.startIndicator()
         //URL定義
         guard let url = URL(string: "https://api.github.com/search/repositories?q=language%3Aswift&sort=stars")
@@ -35,7 +35,7 @@ public class Presenter {
             }
         })
     }
-    public init(client: APIClient, view: ViewInterface) {
+    private init(client: APIClient, view: ViewInterface) {
         self.apiClient = client
         self.view = view
     }

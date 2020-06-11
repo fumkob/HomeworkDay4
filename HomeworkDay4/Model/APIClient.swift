@@ -9,23 +9,28 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import RxSwift
+import RxCocoa
 
 public class APIClient {
     private let afRequest = AF
-    public func getData(url: URL, callBack: @escaping (Result<[GitHubData], Error>) -> Void) {
-        var urlRequest = URLRequest(url: url)
-        //タイムアウト時間定義
-        urlRequest.timeoutInterval = 5
-        //データ取得
-        afRequest.request(urlRequest).validate().responseJSON {response in
-            switch response.result {
-            //成功
-            case .success(let value) :
-                callBack(.success(self.parseData(value: value)))
-            case .failure(let error) :
-                print(error)
-                callBack(.failure(error))
+    public func getData(url: URL) -> Observable<Result<[GitHubData], Error>> {
+        return Observable<Result<[GitHubData], Error>>.create {observer in
+            var urlRequest = URLRequest(url: url)
+            //タイムアウト時間定義
+            urlRequest.timeoutInterval = 5
+            //データ取得
+            self.afRequest.request(urlRequest).validate().responseJSON {response in
+                switch response.result {
+                //成功
+                case .success(let value) :
+                    observer.onNext(.success((self.parseData(value: value))))
+                case .failure(let error) :
+                    print(error)
+                    observer.onNext(.failure(error))
+                }
             }
+            return Disposables.create()
         }
     }
     private func parseData(value: Any) -> [GitHubData] {
