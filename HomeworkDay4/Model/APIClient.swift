@@ -14,8 +14,8 @@ import RxCocoa
 
 public class APIClient {
     private let afRequest = AF
-    public func getData(url: URL) -> Observable<Result<[GitHubData], Error>> {
-        return Observable<Result<[GitHubData], Error>>.create {observer in
+    public func getData(url: URL) -> Single<[GitHubData]> {
+        return .create {observer in
             var urlRequest = URLRequest(url: url)
             //タイムアウト時間定義
             urlRequest.timeoutInterval = 5
@@ -24,10 +24,9 @@ public class APIClient {
                 switch response.result {
                 //成功
                 case .success(let value) :
-                    observer.onNext(.success((self.parseData(value: value))))
-                case .failure(let error) :
-                    print(error)
-                    observer.onNext(.failure(error))
+                    observer(.success((self.parseData(value: value))))
+                case .failure :
+                    observer(.error(APIError.urlError))
                 }
             }
             return Disposables.create()
@@ -38,5 +37,8 @@ public class APIClient {
         let items = jsonData["items"]
         //データを解析し、配列に格納する
         return items.map { GitHubData(item: $0.1) }
+    }
+    enum APIError: Error {
+        case urlError
     }
 }

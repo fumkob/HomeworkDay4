@@ -16,11 +16,11 @@ public class ViewModel {
     private let dataEventSubject = PublishSubject<[GitHubData]>()
     public var gitHubDataArray: Driver<[GitHubData]> {return dataEventSubject.asDriver(onErrorJustReturn: [])}
     //くるくる用
-    private let indicatorEventSubject = BehaviorSubject<Bool>(value: true)
-    public var indicatorStatus: Driver<Bool> {return indicatorEventSubject.asDriver(onErrorJustReturn: false)}
+    private let indicatorEventSubject = PublishSubject<Bool>()
+    public var indicatorStatus: Driver<Bool> {return indicatorEventSubject.asDriver(onErrorDriveWith: .empty())}
     //アラート用
-    private let alertEventSubject = BehaviorSubject<Bool>(value: false)
-    public var alertStatus: Driver<Bool> {return alertEventSubject.asDriver(onErrorJustReturn: false)}
+    private let alertEventSubject = PublishSubject<Bool>()
+    public var alertStatus: Driver<Bool> {return alertEventSubject.asDriver(onErrorDriveWith: .empty())}
     //disposeBag
     private var disposeBag = DisposeBag()
     init(apiClient: APIClient) {
@@ -39,18 +39,13 @@ public class ViewModel {
         disposeBag = DisposeBag()
         //API通信 
         apiClient.getData(url: url)
-            .subscribe(onNext: { [weak self] in
-                //くるくるやめる
+            .subscribe(onSuccess: { [weak self] data in
                 self?.indicatorEventSubject.onNext(false)
-                //分岐
-                switch $0 {
-                case let .success(data):
-                    self?.dataEventSubject.onNext(data)
-                case let .failure(error):
-                    //alert表示
+                self?.dataEventSubject.onNext(data)
+                }, onError: { [weak self] error in
+                    self?.indicatorEventSubject.onNext(false)
                     self?.alertEventSubject.onNext(true)
                     print(error)
-                }
             })
             .disposed(by: disposeBag)
     }

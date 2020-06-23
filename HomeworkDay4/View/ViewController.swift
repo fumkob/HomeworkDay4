@@ -27,11 +27,10 @@ class ViewController: UIViewController {
         tableSetting()
         //アラート表示設定
         alertSetting()
-    }
-    override func viewWillAppear(_ animated: Bool) {
         //データやり取り->テーブルに設定
         dataSetting()
     }
+
     //ViewModel設定
     private func viewModelSetting() {
         self.viewModel = ViewModel(apiClient: APIClient())
@@ -67,13 +66,12 @@ class ViewController: UIViewController {
         alertStatus
             .drive(onNext: { [weak self] in
                 //trueが流れてきたらアラート表示
-                if $0 {
-                    let alert
+                guard $0 else { return }
+                let alert
                     = UIAlertController.apiAlert(title: "Error", message: "The internet connection appeared to be offline.", preferredStyle: .alert, retryHandler: { (_ : UIAlertAction) -> Void in
                         self?.viewModel.requestData()
                     })
                 self?.present(alert, animated: true, completion: nil)
-                }
             })
             .disposed(by: disposeBag)
     }
