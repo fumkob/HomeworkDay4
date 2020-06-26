@@ -14,8 +14,8 @@ import RxCocoa
 
 public class APIClient {
     private let afRequest = AF
-    public func getData(url: URL) -> Observable<Result<[GitHubData], Error>> {
-        return Observable<Result<[GitHubData], Error>>.create {observer in
+    public func getData(url: URL) -> Observable<[GitHubData]> {
+        return .create {observer in
             var urlRequest = URLRequest(url: url)
             //タイムアウト時間定義
             urlRequest.timeoutInterval = 5
@@ -24,10 +24,10 @@ public class APIClient {
                 switch response.result {
                 //成功
                 case .success(let value) :
-                    observer.onNext(.success((self.parseData(value: value))))
+                    observer.onNext(self.parseData(value: value))
                 case .failure(let error) :
                     print(error)
-                    observer.onNext(.failure(error))
+                    observer.onError(error)
                 }
             }
             return Disposables.create()

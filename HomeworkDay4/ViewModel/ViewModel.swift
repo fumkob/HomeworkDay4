@@ -37,21 +37,18 @@ public class ViewModel {
                 fatalError("url is nil")
         }
         disposeBag = DisposeBag()
-        //API通信 
+        //API通信
         apiClient.getData(url: url)
-            .subscribe(onNext: { [weak self] in
+            .subscribe(onNext: { [weak self] data in
                 //くるくるやめる
                 self?.indicatorEventSubject.onNext(false)
-                //分岐
-                switch $0 {
-                case let .success(data):
-                    self?.dataEventSubject.onNext(data)
-                case let .failure(error):
-                    //alert表示
-                    self?.alertEventSubject.onNext(true)
-                    print(error)
-                }
-            })
+                self?.dataEventSubject.onNext(data)
+                }, onError: { [weak self] error in
+                //alert表示
+                self?.indicatorEventSubject.onNext(false)
+                self?.alertEventSubject.onNext(true)
+                print(error)
+                })
             .disposed(by: disposeBag)
     }
 }
