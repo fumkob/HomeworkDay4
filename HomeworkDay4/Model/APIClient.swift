@@ -9,23 +9,27 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import RxSwift
+import RxCocoa
 
 public class APIClient {
     private let afRequest = AF
-    public func getData(url: URL, callBack: @escaping (Result<[GitHubData], Error>) -> Void) {
-        var urlRequest = URLRequest(url: url)
-        //タイムアウト時間定義
-        urlRequest.timeoutInterval = 5
-        //データ取得
-        afRequest.request(urlRequest).validate().responseJSON {response in
-            switch response.result {
-            //成功
-            case .success(let value) :
-                callBack(.success(self.parseData(value: value)))
-            case .failure(let error) :
-                print(error)
-                callBack(.failure(error))
+    public func getData(url: URL) -> Single<[GitHubData]> {
+        return .create {observer in
+            var urlRequest = URLRequest(url: url)
+            //タイムアウト時間定義
+            urlRequest.timeoutInterval = 5
+            //データ取得
+            self.afRequest.request(urlRequest).validate().responseJSON {response in
+                switch response.result {
+                //成功
+                case .success(let value) :
+                    observer(.success((self.parseData(value: value))))
+                case .failure :
+                    observer(.error(APIError.urlError))
+                }
             }
+            return Disposables.create()
         }
     }
     private func parseData(value: Any) -> [GitHubData] {
@@ -33,5 +37,8 @@ public class APIClient {
         let items = jsonData["items"]
         //データを解析し、配列に格納する
         return items.map { GitHubData(item: $0.1) }
+    }
+    enum APIError: Error {
+        case urlError
     }
 }
